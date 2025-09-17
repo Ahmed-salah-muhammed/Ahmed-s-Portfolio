@@ -11,13 +11,17 @@
 </head>
 <body class="font-nunito">
 <!-- intro section -->
-<div class="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 ">
+<div class="h-100 lg:h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden ">
   <!-- navbar -->
-    <nav class="w-full fixed top-0 bg-white">
+    <nav class="w-full fixed top-0 bg-white z-20 shadow-md">
       <div class="container mx-auto py-5 flex justify-between items-center ">
-        <div class="flex items-center gap-3">
-          <img class="w-30" src="./img/Ah-Salah (2).png" alt="">
-          <span class="text-2xl font-bold text-indigo-900">Ahmed Salah Portfolio</span>
+        <div class="flex items-center gap-1">
+          <a href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">
+            <img class="w-30 mr-4 cursor-pointer" src="./img/Ah-Salah (2).png" alt="">
+          </a>
+          <span class="text-2xl font-bold text-indigo-900">
+            <a class="text-indigo-700 active:text-purple-700" href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">Ahmed Salah Portfolio</a>
+          </span>
         </div>
         <ul class="hidden md:flex space-x-10 text-sm font-bold text-gray-600 ">
           <li class="hover:text-gray-400 font-bold">
@@ -36,7 +40,7 @@
             <a href="#">Contact Me</a>
           </li>
         </ul>
-        <img class="hidden md:block w-5 cursor-pointer" src="" alt="">
+        <img class="hidden md:block w-5 cursor-pointer" src="img/moon.png" alt="">
         <div id="hamburger" class="space-y-1 mr-2 cursor-pointer md:hidden z-20">
           <div class="w-6 h-0.5 bg-black"></div>
           <div class="w-6 h-0.5 bg-black"></div>
@@ -59,6 +63,12 @@
       </ul>
     </nav>
     <!-- intro content -->
+    <!-- image -->
+    <img class="absolute bottom-0 right-0  lg:left-0 mx-auto h-5/6 object-cover " src="./img/Generated Image September 17, 2025 - 1_55PM.png" alt="">
+    <!-- circle -->
+    <div class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-96 h-96 bg-indigo-900 rounded-full"></div>
+    <!-- automated text -->
+    <!-- text -->
     <img class="" src="" alt="">
   </div>
   <script src="app.js"></script>
