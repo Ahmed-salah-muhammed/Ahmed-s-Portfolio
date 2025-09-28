@@ -2,6 +2,6 @@
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
   --font-nunito: 'Nunito', 'sans-serif';
-  --size-max-w: 35rem;
-  --size-max-h: 35rem;
+  --size-max-w: 40rem;
+  --size-max-h: 40rem;
 }
