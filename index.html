@@ -12,37 +12,43 @@
 </head>
 <body class="font-nunito">
 <!-- intro section -->
-<div class="h-100 lg:h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden ">
+<div class="h-100 lg:h-screen bg-gradient-to-t from-indigo-200  dark:from-slate-800 dark:to-slate-900  relative overflow-hidden ">
   <!-- navbar -->
-    <nav class="w-full fixed top-0 bg-white z-20 shadow-md">
-      <div class="container mx-auto py-5 flex justify-between items-center ">
+    <nav class="w-full fixed top-0 bg-white z-20 shadow-md dark:bg-slate-900">
+      <div class="container mx-auto py-5 flex justify-evenly  items-center ">
         <div class="flex items-center gap-1">
           <a href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">
-            <img class="w-30 mr-4 cursor-pointer" src="./img/Ah-Salah (2).png" alt="">
+            <img class="w-30 mr-4 cursor-pointer" src="./img/Ahmed-Salah (2).png" alt="">
           </a>
           <span class="text-xl font-bold text-indigo-900">
-            <a class="text-indigo-900 active:text-purple-700" href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">Ahmed Salah Portfolio</a>
+            <a class="text-indigo-900 active:text-purple-700 dark:text-gray-300" href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">Ahmed Salah Portfolio</a>
           </span>
         </div>
         <ul class="hidden md:flex space-x-10 text-sm font-bold text-gray-600 ">
-          <li class="hover:text-gray-400 font-bold">
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300">
             <a href="#">Home Page</a>
           </li>
-          <li class="hover:text-gray-400 font-bold">
-            <a href="#">About Me</a>
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300">
+            <a href="#About">About Me</a>
           </li>
-          <li class="hover:text-gray-400 font-bold">
-            <a href="#">Services</a>
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300">
+            <a href="#Services">Services</a>
           </li>
-          <li class="hover:text-gray-400 font-bold"> 
-            <a href="#">Projects</a>
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300"> 
+            <a href="#Projects">Projects</a>
           </li>
-          <li class="hover:text-gray-400 font-bold">
-            <a href="#">Contact Me</a>
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300">
+            <a href="#Contact">Contact Me</a>
           </li>
         </ul>
-        <img class="hidden md:block w-5 cursor-pointer" src="img/moon.png" alt="">
-        <div id="hamburger" class="space-y-1 mr-2 cursor-pointer md:hidden z-20">
+        <img id="moon_btn" class="md:block w-5 cursor-pointer" src="img/moon.png" alt="Toggle dark mode">
+        <script>
+          const moonBtn = document.getElementById("moon_btn");
+          moonBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+            });
+</script>
+        <div id="hamburger" class="space-y-1 mr-2 cursor-pointer z-20">
           <div class="w-6 h-0.5 bg-black"></div>
           <div class="w-6 h-0.5 bg-black"></div>
           <div class="w-6 h-0.5 bg-black"></div>
@@ -50,27 +56,31 @@
       </div>
       <ul id="menu" class=" hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
           <li>
-            <a href="#">About Me</a>
+            <a id="hlink" href="#About">About Me</a>
+            <hr class="border-gray-500 w-1/2 mx-auto">
           </li>
           <li>
-            <a href="#">Services</a>
+            <a id="hlink" href="#Services">Services</a>
+            <hr class="border-gray-500 w-1/2 mx-auto">
           </li>
           <li> 
-            <a href="#">Projects</a>
+            <a id="hlink" href="#Projects">Projects</a>
+            <hr class="border-gray-500 w-1/2 mx-auto">
           </li>
           <li>
-            <a href="#">Contact Me</a>
+            <a id="hlink" href="#Contact">Contact Me</a>
+            <hr class="border-gray-500 w-1/2 mx-auto">
           </li>
       </ul>
     </nav>
     <!-- intro content -->
     <!-- image -->
-    <img class="absolute bottom-0 right-0  lg:left-0 mx-auto h-5/6 object-cover " src="./img/Generated Image September 17, 2025 - 2_27PM[1].png" alt="">
+    <img class="absolute bottom-0 right-0  lg:left-0 mx-auto h-5/6 object-cover" src="./img/esri-full-banner.png" alt="">
     <!-- circle -->
     <div class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto bg-indigo-900 rounded-full -z-20 w-[700px] h-[700px]"></div>
     <!-- automated text -->
     <div class="absolute top-1/3  left-5 text-3xl lg:left-20  lg:text-5xl font-bold text-gray-900 space-y-5 sm:space-y-7  md:text-3xl lg:space-y-10 sm:text-4xl ">
-      <span class="text-gray-700">
+      <span class="text-gray-700 dark:text-gray-300">
         GIS Solution
       </span>
       <p id="text" class="text-red-500">
@@ -78,32 +88,31 @@
       </p>
     </div>
     <!-- text -->
-    <div class="hidden lg:flex flex-col gap-5 absolute rounded-3xl shadow-lg bottom-0 top-0 right-10 m-auto w-1/3 text-gray-800  bg-white p-6 h-fit" >
-      <h1 class="text-2xl font-bold text-indigo-900">
+    <div class="hidden lg:flex flex-col gap-5 absolute rounded-3xl shadow-lg bottom-0 top-0 right-10 m-auto w-1/3 text-gray-800  bg-white p-6 h-fit dark:bg-slate-900 dark:shadow-slate-800" >
+      <h1 class="text-2xl font-bold text-indigo-900 dark:text-gray-300">
         Hi, I'm Ahmed Salah Muhammed
       </h1>
-      <p class="text-gray-500 text-md">
+      <p class="text-gray-500 text-md dark:text-gray-400">
         A passionate GIS Solution Engineer with a knack for problem-solving and a love for technology. I specialize in creating innovative solutions that leverage geographic information systems to drive business success.
       </p>
-      <a href="#Contact Me" class="bg-indigo-500 rounded-xl shadow-2xl w-fit px-3 py-3 font-bold text-white">Hire Me</a>
+      <a href="#Contact Me" class="bg-indigo-500 rounded-xl shadow-2xl w-fit px-3 py-3 font-bold text-white ">Hire Me</a>
     </div>
-    <img class="" src="" alt="">
   </div>
   <!-- About -->
-  <div class="px-5">
+  <div class="px-5 dark:bg-slate-900" id="About">
 <div class="container m-auto py-40 flex flex-col lg:flex-row items-center lg:items-start gap-40">
     <!-- left  -->
-      <div class="relative">
+      <div class="relative dark:bg-slate-900">
         <img class="w-2/4 top-0 left-0 -z-10 absolute" src="img/dots.png" alt="">
         <div class="h-full rounded-full overflow-hidden ">
           <img src="/img/IMG_4626.png" alt="">
         </div>
       </div>
     <!-- right -->
-      <div class="my-auto flex flex-col gap-3">
-        <h1 class="text-2xl font-bold text-indigo-900 ">About Me</h1>
-        <h1 class="text-3xl font-bold text-black ">Better Solution</h1>
-        <h1 class="text-3xl font-bold text-black ">Better Experience</h1>
+      <div class="my-auto flex flex-col gap-3 dark:bg-slate-900">
+        <h1 class="text-2xl font-bold text-indigo-900 dark:text-gray-300 ">About Me</h1>
+        <h1 class="text-3xl font-bold text-black dark:text-gray-400">Better Solution</h1>
+        <h1 class="text-3xl font-bold text-black dark:text-gray-400">Better Experience</h1>
         <P class="text-gray-500 text-md w-3/4 flex ">
           I'm Ahmed Salah, a dedicated GIS Solution Engineer and a current student in ITI 9-Month program, with a passion for leveraging geographic information systems to create impactful solutions. With a strong foundation in GIS technologies and a keen eye for detail, I specialize in developing innovative strategies that drive business success. My expertise includes spatial analysis, data visualization, and system integration, allowing me to deliver comprehensive solutions tailored to client needs. I thrive in collaborative environments and am committed to continuous learning and professional growth in the ever-evolving field of GIS.
         </P>
@@ -123,73 +132,73 @@
     </div>
   </div>
   <!-- services -->
-  <div class="bg-indigo-100 py-20 px-5 ">
+  <div class="bg-indigo-100 py-20 px-5 dark:bg-slate-700" id="Services">
     <div class="container mx-auto">
           <div class="flex flex-col gap-3 items-center">
-            <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5">Services</h1>
-            <h1 class="text-3xl font-semibold">What do i offer?</h1>
+            <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5 dark:text-gray-300">Services</h1>
+            <h1 class="text-3xl font-semibold dark:text-gray-400">What do i offer?</h1>
             <p class="text-gray-400 text-md text-center w-1/2 mb-20 pt-2">
               I offer a range of services to help businesses leverage the power of GIS technology. Whether you need assistance with spatial analysis, data visualization, or system integration, I have the expertise to deliver comprehensive solutions tailored to your needs.
             </p>
           </div>
         </div>
       <!-- bottom -->
-      <div class="container mx-auto">
-      <div class="bg-indigo-100 py-20 px-5 ">
+      <div class="container mx-auto dark:bg-slate-900">
+      <div class="bg-indigo-100 py-20 px-5 dark:bg-slate-700">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- card 1 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform dark:bg-slate-800">
           <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">Web Design</h1>
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">Web Design</h1>
           <p class="text-gray-500 text-md">
             Creating visually appealing and user-friendly web designs that enhance user experience and drive engagement.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
         </div>
         <!-- card 2 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
-          <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">Web Development</h1>
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+          <img class="w-16" src="/img/3395056.webp" alt="">
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">Web Development</h1>
           <p class="text-gray-500 text-md">
             Building responsive and dynamic websites using modern technologies to ensure optimal performance across all devices.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
         </div>
         <!-- card 3 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
-          <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">SEO Optimization</h1>
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+          <img class="w-16" src="/img/10145789.png" alt="">
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">SEO Optimization</h1>
           <p class="text-gray-500 text-md">
             Implementing effective SEO strategies to improve website visibility and drive organic traffic from search engines.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
         </div>
         <!-- card 4 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
-          <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">GIS Development</h1>
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+          <img class="w-16" src="/img/8112488.png" alt="">
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">GIS Development</h1>
           <p class="text-gray-500 text-md">
-            Providing comprehensive GIS solutions incl  uding spatial analysis, data visualization, and system integration to meet client needds.
+            Providing comprehensive GIS solutions including spatial analysis, data visualization, and system integration to meet client needds.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
         </div>
         <!-- card 5 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
-          <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">Consulting Services</h1>
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+          <img class="w-16" src="/img/blob.png" alt="">
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">Consulting Services</h1>
           <p class="text-gray-500 text-md">
             Offering expert consulting services to help businesses leverage GIS technology for improved decision-making and operational efficiency.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
         </div>
           <!-- card 6 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
-          <img class="w-16" src="/img/icon.png" alt="">
-          <h1 class="text-xl font-bold text-indigo-900">Technical Support</h1>
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform">
+          <img class="w-16" src="/img/support.png" alt="">
+          <h1 class="text-xl font-bold text-indigo-900 dark:text-gray-300">Technical Support</h1>
           <p class="text-gray-500 text-md">
             Providing reliable technical support to ensure the smooth operation of GIS systems and address any issues that may arise.
           </p>
-          <a class="text-indigo-700 cursor-grab font-semibold">Read More</a>
+          <a class="text-indigo-700 cursor-grab font-semibold dark:text-gray-300">Read More</a>
           </div>
         </div>
       </div>
@@ -198,30 +207,30 @@
   <!-- Portfolio -->
   </div>
       <!-- bottom -->
-        <div class= "py-20 px-5">
+        <div class= "py-20 px-5 dark:bg-slate-900" id="Projects">
           <div class="container m-auto">
             <div class="flex flex-col gap-3 items-center">
-              <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5">Portfolio</h1>
-              <h1 class="text-3xl font-semibold">Works & Projects</h1>
+              <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5 dark:text-gray-300">Portfolio</h1>
+              <h1 class="text-3xl font-semibold dark:text-gray-400">Works & Projects</h1>
               <p class="text-gray-400 text-md text-center w-1/2 mb-20 pt-2">
                 Here are some of my recent projects that showcase my skills and expertise in GIS solutions. Each project demonstrates my ability to deliver innovative and effective solutions tailored to client needs.
               </p>
             </div>
           </div>
         </div>
-        <div class=" py-20 px-5">
-          <div class="container m-auto">
+        <div class=" py-20 px-5 dark:bg-slate-900">
+          <div class="container m-auto dark:bg-slate-900">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               <!-- card 1 -->
-              <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform   hover:border-indigo-300 border-1">
+              <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 transition-transform   hover:border-indigo-300 border-1">
                   <div class="portfolio-content">
-                    <h3 class="pb-1 font-bold text-xl">Project 1</h3>
+                    <h3 class="pb-1 font-bold text-xl dark:text-gray-300">Project 1</h3>
                     <img class="my-2 py-1" src="img/1.jpeg" alt="">
-                    <hr>
-                    The project is to manage the Risks Assessment of the environment of Salloum City.
+                    <hr class=" dark:text-gray-300 py-1">
+                    <p class="dark:text-gray-300 py-1">The project is to manage the Risks Assessment of the environment of Salloum City.</p>
                     <pre><a target="_blank" class="text-indigo-400 font-semibold py-1"
-                            href="https://storymaps.arcgis.com/stories/821b762db0b14c36858b936a6b9f5932">storymap for this project</a></pre>
-                              <pre class="font-sans overflow-auto whitespace-pre-wrap break-words">
+                            href="https://storymaps.arcgis.com/stories/821b762db0b14c36858b936a6b9f5932">storymap for this project 🔗</a></pre>
+                              <pre class="dark:text-gray-300 font-sans overflow-auto whitespace-pre-wrap break-words">
 
 -We have prepared environmental studies 
 that lead us reach the Risk Assessment :-
@@ -238,22 +247,24 @@ and families at risk .
 
 Then it was done :-
 <div class="font-semibold px-5 text-sm">
-<li><ul> 1- An Immediate Action plan.</ul></li>
-<li><ul>2- A short-term plan.</ul></li>
-<li><ul>3- A long-term plan.</ul></li>
+<ul>
+  <li>1- An Immediate Action plan.</li>
+  <li>2- A short-term plan.</li>
+  <li>3- A long-term plan.</li>
+</ul>
 </div>
 -And the reflection of studies on the plan
 for Salloum.</pre></hr><br>
-          <a target="_blank" href="https://storymaps.arcgis.com/stories/821b762db0b14c36858b936a6b9f5932" class="text-indigo-700 cursor-grab font-semibold"><span class="text-1xl text-white mb-5 p-2 bg-indigo-400 rounded-md shadow-xl">Read More</span></a>
+          <a target="_blank" href="https://storymaps.arcgis.com/stories/821b762db0b14c36858b936a6b9f5932" class="dark:text-gray-300 py-1 text-indigo-700 cursor-grab font-semibold"><span class="text-1xl text-white mb-5 p-2 bg-indigo-400 rounded-md shadow-xl">Read More</span></a>
           </div>
         </div>
         <!-- card 2 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105  hover:border-indigo-300 border-1 transition-transform ">
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105  hover:border-indigo-300 border-1 transition-transform ">
             <div class="portfolio-content">
-              <h3 class="pb-1 font-bold text-xl">Project 2</h3>
+              <h3 class="pb-1 font-bold text-xl dark:text-gray-300">Project 2</h3>
               <img class="my-2 py-1" src="img/3.jpeg" alt="">
-                <hr>
-                <pre class="font-sans overflow-auto whitespace-pre-wrap break-words">
+                <hr class="dark:text-gray-300">
+                <pre class="dark:text-gray-300 font-sans overflow-auto whitespace-pre-wrap break-words">
 Here u can see our project to study the urban atmospheric
 environment of urban design alternatives for a residential
 group in El Gouna city in the Red Sea.
@@ -266,15 +277,15 @@ and ArcGIS pro to visualize and compare the results. </pre></hr><br>
         </div>
 
         <!-- card 3 -->
-        <div class="bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 hover:border-indigo-300 border-1 transition-transform ">
+        <div class="dark:bg-slate-800 bg-white rounded-2xl shadow-lg p-10 flex flex-col gap-5 hover:scale-105 hover:border-indigo-300 border-1 transition-transform ">
             <div class="portfolio-content">
-              <h3 class="pb-1 font-bold text-xl">Project 3</h3>
+              <h3 class="pb-1 font-bold text-xl dark:text-gray-300">Project 3</h3>
               <img class="my-2 py-1" src="img/2.jpeg" alt="">
-              <hr>
-              The project is to manage the Risks Assessment of the environment of Salloum City.
-              <pre><a target="_blank" class="text-indigo-400 font-semibold py-1"
-                      href="https://arcg.is/1ffWfe">storymap for this project</a></pre>
-                        <pre class="font-sans overflow-auto whitespace-pre-wrap break-words">
+              <hr class="dark:text-gray-300">
+              <p class="dark:text-gray-300 py-1">this project about environmental studies</p>
+              <pre><a target="_blank" class="text-indigo-400 font-semibold"
+                      href="https://arcg.is/1ffWfe">storymap for this project 🔗</a></pre>
+                        <pre class="dark:text-gray-300 font-sans overflow-auto whitespace-pre-wrap break-words">
 
 preparations for the eastern Assiut region to study the
 possibility of its developmental exploitation in the light
@@ -289,39 +300,43 @@ were obtained from the United States Geological Survey
       </div>
     </div>
   </div>
-  </div> 
 <!-- iframe -->
-    <div class="container m-auto py-5">
-    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
-padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-border-radius: 20px; will-change: transform;" class="canva-iframe-container hover:scale-105 hover:border-indigo-300 border-1 transition-transform">
-<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 90px; padding: 0;margin: 0;"
-src="https://www.canva.com/design/DAGQnxyCmqc/Y9mMzCjiRg49WLmUb62rwA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-</iframe>
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
+padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: -15px;   margin-bottom: -15px;  overflow: hidden;
+border-radius: 8px; will-change: transform;" class="dark:bg-slate-900">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGQnxyCmqc/Y9mMzCjiRg49WLmUb62rwA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
 </div>
-</div>
+<!-- iframe -->
+  <!-- <div class="flex justify-center items-center py-20 px-5 dark:bg-slate-900 ">
+    <iframe class="dark:bg-slate-800  w-screen h-screen md:w-3/4 rounded-3xl shadow-2xl" src="https://www.canva.com/design/DAGQnxyCmqc/Y9mMzCjiRg49WLmUb62rwA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+  </div> -->
 <!-- contact -->
-  <div class="bg-indigo-100 py-20 px-5">
+  <div class="bg-indigo-100 py-20 px-5 dark:bg-slate-700" id="Contact">
     <div class="container m-auto">
       <div class="flex flex-col gap-3 items-center">
-        <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5">Contact</h1>
-        <h1 class="text-3xl font-semibold">how to contact me?</h1>
+        <h1 class="text-3xl font-bold text-center text-indigo-900 mb-5 dark:text-gray-300">Contact</h1>
+        <h1 class="text-3xl font-semibold dark:text-gray-400">how to contact me?</h1>
         <p class="text-gray-400 text-md text-center w-1/2 mb-20 pt-2">
           I'm always excited to connect with new people and explore potential opportunities. Whether you have a question about my services, want to discuss a project, or just want to say hello, feel free to reach out. You can contact me via email at
         </p>
       </div> 
       <form action="" method="" class="flex flex-col items-center">
-        <input type="text" placeholder="Your Name" class="w-full md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <input type="email" placeholder="Your Email" class="w-full md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <textarea placeholder="Your Message" class="w-full max-h-40 md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        <input type="text" placeholder="Your Name" class="dark:text-gray-200 w-full md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" placeholder="Your Email" class="dark:text-gray-200 w-full md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <textarea placeholder="Your Message" class="dark:text-gray-200 w-full max-h-40 md:w-1/2 p-3 rounded-lg mb-5 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         <button type="submit" class="bg-indigo-500 text-white px-5 py-3 rounded-lg hover:bg-indigo-600 transition-colors">Send Message</button>
       </form>
     </div>
   </div>
   <!-- footer -->
-  <div class="w-full  top-0 bg-gray-800 z-20 shadow-md px-5">
-      <div class="container mx-auto py-5 flex justify-between items-center ">
+  <div class="w-full  top-0 bg-gray-800 z-20 shadow-2xl px-5 dark:bg-slate-900">
+      <div class="container mx-auto py-5 flex justify-evenly gap-5 items-center ">
         <div class="flex items-center gap-2">
+          <a href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">
+          <img class="w-30 mr-4 cursor-pointer" src="./img/Ahmed-Salah (2).png" alt="">
+          </a>
           <span class="text-xl font-bold text-indigo-900">
             <a class="text-gray-300 active:text-purple-700" href="https://ahmed219013.my.canva.site/ahmedsalah" target="_blank" rel="noopener noreferrer">Ahmed Salah Portfolio</a>
           </span>
@@ -330,15 +345,327 @@ src="https://www.canva.com/design/DAGQnxyCmqc/Y9mMzCjiRg49WLmUb62rwA/view?embed"
           <p class="hidden md:block text-gray-300 font-bold ">© 2026 Ahmed Salah. All rights reserved.</p>
         </span>
         <div class="flex  gap-2">
-          <img class="w-5 cursor-pointer" src="img/facebook.png" alt="">
-          <img class="w-5 cursor-pointer" src="img/linkedin.png" alt="">
-          <img class="w-5 cursor-pointer" src="img/github-white-icon.webp" alt="">
-          <img class="w-5 cursor-pointer" src="img/twitter.png" alt="">
+          <a class="w-5 cursor-pointer" href="https://www.facebook.com/vhmeddd6/" target="_blank"><img src="img/facebook.png" alt=""></a>
+          <a href="https://www.linkedin.com/in/ahmed-salah-abd-el-bari-395381234/" target="_blank"><img class="w-5 cursor-pointer" src="img/linkedin.png" alt=""></a>
+          <a href="https://github.com/Ahmed-salah-muhammed" target="_blank"><img class="w-5 cursor-pointer" src="img/github-white-icon.webp" alt=""></a>
+          <a href="https://x.com/Ahmed219013" target="_blank"><img class="w-5 cursor-pointer" src="img/twitter.png" alt=""></a>
         </div>
       </div>
     </div>
+<!-- Chat Button -->
+<div id="chat-bot" class="fixed bottom-5 right-5 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center cursor-pointer text-white text-2xl z-50">
+  💬
+</div>
+
+<!-- Chat Window -->
+<div id="chat-window" class="hidden fixed bottom-20 right-5 w-80 h-96 bg-white dark:bg-gray-800 shadow-lg rounded-lg flex flex-col z-50">
+  <div class="flex justify-between w-full gap-0.5"><div class="bg-blue-500 dark:bg-blue-700 text-white p-3 rounded-t-lg font-semibold w-full">Ahmed-Salah Chat-Bot</div>
+  <button id="chat-togglee" class="p-2 dark:bg-blue-700 bg-blue-500 text-white rounded-t-lg right-0 cursor-pointer hover:bg-slate-400">
+X</button>
+</div>
+  <div id="chat-messages" class="flex-1 p-3 overflow-y-auto text-gray-600 dark:text-gray-200">How can i help u?</div>
+  <div class="p-3 border-t flex">
+    <input id="chat-input" type="text" placeholder="Ask Ahmed-Salah..." class="flex-1 border rounded p-2 dark:bg-gray-700 dark:text-white">
+    <button id="chat-send" class="bg-blue-500 dark:bg-blue-700 text-white px-3 ml-2 rounded cursor-pointer hover:bg-slate-400">Send</button>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const chatBot = document.getElementById('chat-bot');
+  const chatWindow = document.getElementById('chat-window');
+  const chatSend = document.getElementById('chat-send');
+  const chatInput = document.getElementById('chat-input');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatToggle = document.getElementById('chat-togglee');
+  
+  
+
+  // تحميل JSON
+  let referenceQA = {};
+  try {
+    const res = await fetch('reference.json');
+    referenceQA = await res.json();
+  } catch (err) {
+    console.error("Error loading reference.json:", err);
+  }
+
+  // تنظيف النصوص
+  function cleanText(text) {
+    return text.toLowerCase().replace(/[^\w\s\u0600-\u06ff]/gi, '').trim(); 
+  }
+
+  // البحث بالكلمات المفتاحية
+  function getBestMatchAnswer(question) {
+    const q = cleanText(question);
+    const qWords = q.split(/\s+/).filter(word => word.length > 2);
+    const MIN_MATCH_THRESHOLD = Math.ceil(qWords.length * 0.5);
+    if (qWords.length === 0) return null;
+
+    let bestMatch = null;
+    let maxMatchCount = 0;
+
+    for (const key in referenceQA) {
+      let keywords = referenceQA[key].keywords || key.split(/\s+/);
+      keywords = keywords.map(k => cleanText(k)).filter(k => k.length > 2);
+      let matchCount = keywords.filter(k => qWords.includes(k)).length;
+
+      if (matchCount > maxMatchCount) {
+        maxMatchCount = matchCount;
+        bestMatch = referenceQA[key].answer || referenceQA[key];
+      }
+    }
+
+    return maxMatchCount >= MIN_MATCH_THRESHOLD ? bestMatch : null;
+  }
+
+  // فتح/إغلاق الدردشة
+  chatToggle.addEventListener('click', () => chatWindow.classList.toggle('hidden'));
+  chatBot.addEventListener('click', () => chatWindow.classList.toggle('hidden'));
+  document.addEventListener("DOMContentLoaded", () => {
+
+
+    chatToggle.addEventListener('click', () => {
+      chatWindow.classList.toggle('hidden'); // يخفي أو يظهر الشات
+    });
+  });
+
+  // إرسال Enter
+  chatInput.addEventListener('keypress', e => {
+    if(e.key === 'Enter') { e.preventDefault(); chatSend.click(); }
+  });
+
+  // دالة Gemini
+  async function sendMessageToGemini(message) {
+    const API_KEY = "AIzaSyCwewpMiruQh35RNwZWvzVXv0Phj3s9Noo"; 
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`; 
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contents:[{ parts:[{ text: message }] }] })
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        return `Error: ${errorData.error.message}`;
+      }
+      const data = await response.json();
+      return data.candidates[0].content.parts[0].text;
+    } catch(err) {
+      console.error(err);
+      return "Sorry, something went wrong with Gemini.";
+    }
+  }
+
+  // إرسال الرسالة
+  chatSend.addEventListener('click', async () => {
+    const message = chatInput.value.trim();
+    if(!message) return;
+
+    const userMsg = document.createElement('div');
+    userMsg.classList.add('text-right','text-black','dark:text-white','mb-2');
+    userMsg.textContent = message;
+    chatMessages.appendChild(userMsg);
+    chatInput.value = '';
+
+ // رسالة انتظار
+const botMsg = document.createElement('div');
+botMsg.classList.add('text-left', 'text-gray-500', 'mb-2', 'flex', 'items-center', 'space-x-1');
+
+// إضافة 3 نقاط متحركة
+for (let i = 0; i < 3; i++) {
+  const dot = document.createElement('span');
+  dot.classList.add('w-2', 'h-2', 'bg-gray-500', 'rounded-full', 'animate-bounce','m-1');
+  dot.style.animationDelay = `${i * 0.1}s`; // تأخير كل نقطة
+  botMsg.appendChild(dot);
+}
+
+chatMessages.appendChild(botMsg);
+chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    let refAnswer = Object.keys(referenceQA).length > 0 ? getBestMatchAnswer(message) : null;
+
+    if(refAnswer) {
+      botMsg.textContent = refAnswer;
+    } else {
+      const reply = await sendMessageToGemini(message);
+      botMsg.textContent = reply;
+    }
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  });
+});
+</script>
+
+<!-- <div id="chat-window" class="hidden fixed bottom-20 right-5 w-80 h-96 bg-white shadow-lg rounded-lg flex flex-col">
+  <div class="bg-blue-500 text-white p-3 rounded-t-lg">Ahmed Salah Chat-Bot</div>
+  <div id="chat-messages" class="flex-1 p-3 overflow-y-auto dark:bg-slate-700 dark:text-gray-200">
+    <div class="text-gray-500 dark:text-gray-200">Hi, How can i Help u?</div>
+  </div>
+  <div class="p-3 border-t flex dark:bg-slate-700 dark:border-slate-600 dark:text-gray-200">
+    <input id="chat-input" type="text" placeholder="Ask Ahmed-Salah.." class="flex-1 border rounded p-2 dark:text-gray-300">
+    <button id="chat-send" class="bg-blue-500 text-white px-3 ml-2 rounded">send</button>
+  </div>
+</div> -->
+  <!-- <script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const chatBot = document.getElementById('chat-bot');
+    const chatWindow = document.getElementById('chat-window');
+    const chatSend = document.getElementById('chat-send');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    // تحميل JSON وانتظارها قبل السماح بالبحث
+    let referenceQA = {};
+    try {
+      const res = await fetch('reference.json');
+      referenceQA = await res.json();
+      console.log("Reference loaded:", referenceQA);
+    } catch (err) {
+      console.error("Error loading reference.json:", err);
+    }
+
+    // تنظيف النصوص لإزالة علامات الترقيم وتحويلها لأحرف صغيرة
+  function cleanText(text) {
+    return text.toLowerCase().replace(/[^\w\s]/gi, '');
+  }
+
+  function getBestMatchAnswer(question) {
+    const q = cleanText(question);
+    let bestMatch = null;
+    let maxMatchCount = 0;
+
+    for (const key in referenceQA) {
+      const keyClean = cleanText(key);
+      const keyWords = keyClean.split(' ');
+
+      let matchCount = 0;
+      keyWords.forEach(word => {
+        if (q.includes(word)) matchCount++;
+      });
+
+      if (matchCount > maxMatchCount) {
+        maxMatchCount = matchCount;
+        bestMatch = referenceQA[key];
+      }
+    }
+
+    // لو لم نجد أي تطابق حقيقي، نرجع null عشان نسأل Gemini
+    if (maxMatchCount === 0) return null;
+    return bestMatch;
+  }
+
+    // فتح/إغلاق نافذة الدردشة
+    chatBot.addEventListener('click', () => {
+      chatWindow.classList.toggle('hidden');
+    });
+
+    // إرسال الرسالة عند الضغط على Enter
+    chatInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        chatSend.click();
+      }
+    });
+
+    async function sendMessageToGemini(message) {
+      const API_KEY = "AIzaSyCwewpMiruQh35RNwZWvzVXv0Phj3s9Noo";
+      const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contents: [{ parts: [{ text: message }] }] })
+        });
+        if (!response.ok) {
+          const errorData = await response.json();
+          return `Error: ${errorData.error.message}`;
+        }
+        const data = await response.json();
+        return data.candidates[0].content.parts[0].text;
+      } catch (err) {
+        console.error(err);
+        return "Sorry, something went wrong with Gemini.";
+      }
+    }
+
+    // إرسال الرسالة عند النقر على زر الإرسال
+    chatSend.addEventListener('click', async () => {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      // عرض رسالة المستخدم
+      const userMsg = document.createElement('div');
+      userMsg.classList.add('text-right', 'text-black','dark:text-white', 'mb-2');
+      userMsg.textContent = message;
+      chatMessages.appendChild(userMsg);
+      chatInput.value = '';
+
+      // رسالة انتظار
+      const botMsg = document.createElement('div');
+      botMsg.classList.add('text-left', 'text-gray-500', 'mb-2');
+      botMsg.textContent = "...";
+      chatMessages.appendChild(botMsg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      // أولاً: البحث في JSON
+      let refAnswer = null;
+      if (Object.keys(referenceQA).length > 0) {
+          refAnswer = getBestMatchAnswer(message);
+      }
+      // تنظيف النصوص لإزالة علامات الترقيم وتحويلها لأحرف صغيرة
+function cleanText(text) {
+ return text.toLowerCase().replace(/[^\w\s\u0600-\u06ff]/gi, '').trim(); // تحسين للغة العربية
+}
+
+function getBestMatchAnswer(question) {
+  const q = cleanText(question);
+  const qWords = q.split(/\s+/).filter(word => word.length > 2); // فصل الكلمات واستثناء الكلمات القصيرة جداً
+  const MIN_MATCH_THRESHOLD = Math.ceil(qWords.length * 0.5); // 💡 عتبة: 50% من كلمات السؤال يجب أن تتطابق
+
+  let bestMatch = null;
+  let maxMatchCount = 0;
+
+  for (const key in referenceQA) {
+    const keyClean = cleanText(key);
+    const keyWords = keyClean.split(/\s+/).filter(word => word.length > 2); 
+
+    let matchCount = 0;
+    keyWords.forEach(keyWord => {
+      // التأكد من أن الكلمة موجودة في السؤال المُدخل
+      if (qWords.includes(keyWord)) matchCount++; 
+    });
+
+    if (matchCount > maxMatchCount) {
+      maxMatchCount = matchCount;
+      bestMatch = referenceQA[key];
+    }
+  }
+
+  // إذا كان عدد التطابقات (maxMatchCount) أكبر من أو يساوي العتبة
+  if (maxMatchCount >= MIN_MATCH_THRESHOLD && maxMatchCount > 0) {
+    // ✅ وجدنا إجابة دقيقة
+    return bestMatch; 
+  }
+  
+  // ❌ لم نجد تطابقاً كافياً، نعود إلى Gemini
+  return null; 
+}
+
+      if (refAnswer) {
+        botMsg.textContent = refAnswer;
+      } else {
+        // لو مش موجود، نسأل Gemini
+        const reply = await sendMessageToGemini(message);
+        botMsg.textContent = reply;
+      }
+
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    });
+  }); -->
+  </script>
 <!--script -->
-  <script src="app.js"></script>
+  <script src="app.js" ></script>
   <script src="autotyping.js"></script>
 </body> 
 </html>

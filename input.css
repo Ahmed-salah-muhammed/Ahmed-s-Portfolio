@@ -5,3 +5,5 @@
   --size-max-w: 40rem;
   --size-max-h: 40rem;
 }
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
