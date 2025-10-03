@@ -1,3 +1,4 @@
 ﻿# Ahmed-s-Portfolio
 
-## i will make a code using html and TailwindCss as a portfolio
+## that's a portfolio using html, TailwindCss and JS
+
