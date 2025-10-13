@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
-<body class="font-nunito">
+<body class="font-nunito scroll-smooth">
 <!-- intro section -->
 <div class="h-100 lg:h-screen bg-gradient-to-t from-indigo-200  dark:from-slate-800 dark:to-slate-900  relative overflow-hidden ">
   <!-- navbar -->
@@ -28,7 +28,7 @@
           <li class="hover:text-gray-400 font-bold dark:text-gray-300">
             <a href="#">Home Page</a>
           </li>
-          <li class="hover:text-gray-400 font-bold dark:text-gray-300">
+          <li class="hover:text-gray-400 font-bold dark:text-gray-300 ">
             <a href="#About">About Me</a>
           </li>
           <li class="hover:text-gray-400 font-bold dark:text-gray-300">
@@ -41,35 +41,48 @@
             <a href="#Contact">Contact Me</a>
           </li>
         </ul>
-        <img id="moon_btn" class="md:block w-5 cursor-pointer" src="img/moon.png" alt="Toggle dark mode">
+        <img id="sun_btn" class="hidden w-5 cursor-pointer " src="img/moon.png" alt="Toggle dark mode">
+        <img id="moon_btn" class="w-5 cursor-pointer" src="img/4584492.png" alt="Toggle light mode">
         <script>
-          const moonBtn = document.getElementById("moon_btn");
-          moonBtn.addEventListener("click", () => {
-            document.documentElement.classList.toggle("dark");
+          const moon_Btn = document.getElementById("moon_btn");
+          const sun_btn = document.getElementById("sun_btn");
+          moon_Btn.addEventListener("click", () => {
+            document.documentElement.classList.add("dark");
+            moon_Btn.classList.add("hidden");
+            sun_btn.classList.remove("hidden");
+            });
+          sun_btn.addEventListener("click", () => {
+            document.documentElement.classList.remove("dark");
+              sun_btn.classList.add("hidden");
+              moon_Btn.classList.remove("hidden");
             });
 </script>
         <div id="hamburger" class="space-y-1 mr-2 cursor-pointer z-20">
-          <div class="w-6 h-0.5 bg-black"></div>
-          <div class="w-6 h-0.5 bg-black"></div>
-          <div class="w-6 h-0.5 bg-black"></div>
+          <div class="w-6 h-0.5 bg-black dark:bg-gray-400"></div>
+          <div class="w-6 h-0.5 bg-black dark:bg-gray-400"></div>
+          <div class="w-6 h-0.5 bg-black dark:bg-gray-400"></div>
         </div>
       </div>
       <ul id="menu" class=" hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
           <li>
-            <a id="hlink" href="#About">About Me</a>
-            <hr class="border-gray-500 w-1/2 mx-auto">
+            <a id="hlink" href="#About" class="block w-1/2 mx-auto">
+              <div class="hover:text-gray-400 w-1/2 mx-auto transition-transform border-b-2 border-b-blue-200">About Me</div>
+            </a>
           </li>
           <li>
-            <a id="hlink" href="#Services">Services</a>
-            <hr class="border-gray-500 w-1/2 mx-auto">
-          </li>
-          <li> 
-            <a id="hlink" href="#Projects">Projects</a>
-            <hr class="border-gray-500 w-1/2 mx-auto">
+            <a id="hlink" href="#Services" class="block w-1/2 mx-auto">
+              <div class="hover:text-gray-400 w-1/2 mx-auto transition-transform border-b-2 border-b-blue-200">Services</div>
+            </a>
           </li>
           <li>
-            <a id="hlink" href="#Contact">Contact Me</a>
-            <hr class="border-gray-500 w-1/2 mx-auto">
+            <a id="hlink" href="#Projects" class="block w-1/2 mx-auto">
+              <div class="hover:text-gray-400 w-1/2 mx-auto transition-transform border-b-2 border-b-blue-200">projects</div>
+            </a>
+          </li>
+          <li>
+            <a id="hlink" href="#Contact" class="block w-1/2 mx-auto">
+              <div class="hover:text-gray-400 w-1/2 mx-auto transition-transform border-b-2 border-b-blue-200">Contact</div>
+            </a>
           </li>
       </ul>
     </nav>
@@ -95,7 +108,7 @@
       <p class="text-gray-500 text-md dark:text-gray-400">
         A passionate GIS Solution Engineer with a knack for problem-solving and a love for technology. I specialize in creating innovative solutions that leverage geographic information systems to drive business success.
       </p>
-      <a href="#Contact Me" class="bg-indigo-500 rounded-xl shadow-2xl w-fit px-3 py-3 font-bold text-white ">Hire Me</a>
+      <a href="#Contact" id="hlink" class="bg-indigo-500 rounded-xl shadow-2xl w-fit px-3 py-3 font-bold text-white scroll-smooth">Hire Me</a>
     </div>
   </div>
   <!-- About -->
@@ -121,9 +134,7 @@
           <div class="w-3/4 bg-indigo-600 h-1.5 rounded-md"></div>
         </div>
         <h2 class="text-gray-400 font-medium">JS, React, Angular, .NET</h2>
-        <div class="w-full bg-gray-200 rounded-md h-1.5 dark:bg-gray-700">
-          <!-- <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div> -->
-        </div>
+        <div class="w-full bg-gray-200 rounded-md h-1.5 dark:bg-gray-700"></div>
         <h2 class="text-gray-400 font-medium">Esri Native Products "Arcgis Pro - GIS online - GIS Enterprise ..etc"</h2>
         <div class="w-full bg-gray-200 rounded-md h-1.5 dark:bg-gray-700">
           <div class="w-fill bg-indigo-600 h-1.5 rounded-md"></div>
@@ -358,28 +369,59 @@ border-radius: 8px; will-change: transform;" class="dark:bg-slate-900">
 </div>
 
 <!-- Chat Window -->
-<div id="chat-window" class="hidden fixed bottom-20 right-5 w-80 h-96 bg-white dark:bg-gray-800 shadow-lg rounded-lg flex flex-col z-50">
+<div id="chat-window" class="hidden fixed bottom-20 right-5 w-90 h-120  bg-white dark:bg-gray-800 shadow-lg rounded-lg flex flex-col z-50">
   <div class="flex justify-between w-full gap-0.5"><div class="bg-blue-500 dark:bg-blue-700 text-white p-3 rounded-t-lg font-semibold w-full">Ahmed-Salah Chat-Bot</div>
   <button id="chat-togglee" class="p-2 dark:bg-blue-700 bg-blue-500 text-white rounded-t-lg right-0 cursor-pointer hover:bg-slate-400">
 X</button>
 </div>
+  <div id="chat-suggestions" class="flex flex-wrap m-2 overflow-x-auto whitespace-nowrap border-b border-gray-300 dark:border-gray-600 pb-3 mb-3 gap-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-700">
+  <!-- الأسئلة تتضاف هنا تلقائي -->
+  </div>
   <div id="chat-messages" class="flex-1 p-3 overflow-y-auto text-gray-600 dark:text-gray-200">How can i help u?</div>
   <div class="p-3 border-t flex">
     <input id="chat-input" type="text" placeholder="Ask Ahmed-Salah..." class="flex-1 border rounded p-2 dark:bg-gray-700 dark:text-white">
     <button id="chat-send" class="bg-blue-500 dark:bg-blue-700 text-white px-3 ml-2 rounded cursor-pointer hover:bg-slate-400">Send</button>
   </div>
+
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
   const chatBot = document.getElementById('chat-bot');
   const chatWindow = document.getElementById('chat-window');
+  chatWindow.classList.remove('hidden');
   const chatSend = document.getElementById('chat-send');
   const chatInput = document.getElementById('chat-input');
   const chatMessages = document.getElementById('chat-messages');
   const chatToggle = document.getElementById('chat-togglee');
-  
-  
+  const suggestedQuestions = [
+  "مين أحمد صلاح؟",
+  "كيف يمكنني التواصل مع الدعم؟",
+  "ما هي مواعيد العمل؟",
+  "هل تقدمون خصومات؟",
+  "ما هي خدماتك الرئيسية؟",
+  "من هو عمي؟",
+];
 
+const chatSuggestions = document.getElementById('chat-suggestions');
+
+suggestedQuestions.forEach(q => {
+  const btn = document.createElement('button');
+  btn.textContent = q;
+  btn.className = `
+    bg-gray-100 dark:bg-gray-700 
+    text-sm text-black dark:text-white 
+    px-3 py-1 rounded-full 
+    border border-gray-300 dark:border-gray-600 
+    hover:bg-gray-200 dark:hover:bg-gray-600 
+    transition duration-300
+  `;
+  btn.addEventListener('click', () => {
+    chatInput.value = q;
+    chatSend.click();
+    chatSuggestions.classList.add('hidden');
+  });
+  chatSuggestions.appendChild(btn);
+});
   // تحميل JSON
   let referenceQA = {};
   try {

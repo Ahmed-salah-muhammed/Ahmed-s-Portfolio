@@ -20,25 +20,25 @@ hlink.forEach(link => {
     })
 })
 
-hamburger.addEventListener("mouseenter", () => {
-menu.classList.remove("hidden");
-hamburger.classList.add("bg-white");
-});
+// hamburger.addEventListener("mouseenter", () => {
+// menu.classList.remove("hidden");
+// hamburger.classList.add("bg-white");
+// });
 
-hamburger.addEventListener("mouseleave", () => {
-menu.classList.add("hidden");
-hamburger.classList.remove("bg-white");
-});
+// hamburger.addEventListener("mouseleave", () => {
+// menu.classList.add("hidden");
+// hamburger.classList.remove("bg-white");
+// });
 
-menu.addEventListener("mouseenter", () => {
-menu.classList.remove("hidden");
-hamburger.classList.add("bg-white");
-});
+// menu.addEventListener("mouseenter", () => {
+// menu.classList.remove("hidden");
+// hamburger.classList.add("bg-white");
+// });
 
-menu.addEventListener("mouseleave", () => {
-menu.classList.add("hidden");
-hamburger.classList.remove("bg-white");
-});
+// menu.addEventListener("mouseleave", () => {
+// menu.classList.add("hidden");
+// hamburger.classList.remove("bg-white");
+// });
 
 body.addEventListener("click", (e)=>{
     if(e.target.id != "menu" && e.target.id != "hamburger" && e.target.id != "line"){
